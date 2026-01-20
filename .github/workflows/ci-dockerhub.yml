@@ -33,7 +33,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          # This requires the DOCKERHUB_USERNAME secret to be set in GitHub
+          # Verify that DOCKERHUB_USERNAME is set in your Repo Settings
           images: ${{ secrets.DOCKERHUB_USERNAME }}/python-ci-lab
           tags: |
             type=raw,value=latest,enable={{is_default_branch}}
